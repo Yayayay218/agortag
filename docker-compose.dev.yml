@@ -13,8 +13,9 @@ services:
         NODE_ENV: production
     environment:
       DATABASE_URL: "mongodb://mongo:27017/agortag"
+
     volumes:
-      - /home/node/app/uploads
+      - /usr/src/app/storage
     depends_on:
       - mongo
   mongo:

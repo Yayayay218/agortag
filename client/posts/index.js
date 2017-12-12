@@ -22,12 +22,14 @@ export const PostList = (props) => (
   <List {...props}>
     <Datagrid>
       <ReferenceField label="Screen" source="screenId" reference="screens">
-        <TextField source="title" />
+        <TextField source="title"/>
       </ReferenceField>
       <TextField source="title"/>
       <TextField source="description"/>
       <UrlField source="videoUrl" label="Video url"/>
       <UrlField source="websiteUrl" label="Website url"/>
+      <DateField source="createdAt" label="Created At" showTime/>
+      <DateField source="updatedAt" label="Updated At" showTime/>
       <EditButton/>
     </Datagrid>
   </List>
@@ -41,7 +43,7 @@ export const PostCreate = (props) => (
       <TextInput source="videoUrl" label="Video url"/>
       <TextInput source="websiteUrl" label="Website url"/>
       <ReferenceInput label="Screen" source="screenId" reference="screens" allowEmpty>
-        <SelectInput optionText="title" />
+        <SelectInput optionText="title"/>
       </ReferenceInput>
     </SimpleForm>
   </Create>
@@ -55,7 +57,7 @@ export const PostEdit = (props) => (
       <TextInput source="videoUrl" label="Video url"/>
       <TextInput source="websiteUrl" label="Website url"/>
       <ReferenceInput label="Screen" source="screenId" reference="screens">
-        <SelectInput optionText="title" />
+        <SelectInput optionText="title"/>
       </ReferenceInput>
     </SimpleForm>
   </Edit>

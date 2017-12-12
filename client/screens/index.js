@@ -19,6 +19,8 @@ export const ScreenList = (props) => (
     <Datagrid>
       <TextField source="title"/>
       <TextField source="description"/>
+      <DateField source="createdAt" label="Created At" showTime/>
+      <DateField source="updatedAt" label="Updated At" showTime/>
       <EditButton/>
     </Datagrid>
   </List>
