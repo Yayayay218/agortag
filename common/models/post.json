@@ -1,0 +1,43 @@
+{
+  "name": "Post",
+  "plural": "posts",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "websiteUrl": {
+      "type": "string"
+    },
+    "screenId": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "screen": {
+      "type": "belongsTo",
+      "model": "Screen",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {},
+  "mixins": {
+    "TimeStamp" : {
+      "required" : false,
+      "validateUpsert": true,
+      "silenceWarnings": false
+    }
+  }
+}
